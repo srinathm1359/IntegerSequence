@@ -11,12 +11,15 @@ public class ArraySequence implements IntegerSequence{
     }
     currentIndex = 0;
   }
+
   public boolean hasNext() {
     return (currentIndex < data.length);
   }
+
   public int length() {
     return data.length;
   }
+
   public int next() {
     if (hasNext()) {
       currentIndex++;
@@ -25,7 +28,20 @@ public class ArraySequence implements IntegerSequence{
       throw new NoSuchElementException("No new element in the IntegerSequence!");
     }
   }
+
   public void reset() {
     currentIndex = 0;
+  }
+
+  public ArraySequence(IntegerSequence otherseq) {
+    otherseq.reset();
+    currentIndex = 0;
+    data = new int[otherseq.length()];
+    while (otherseq.hasNext()) {
+      data[currentIndex] = otherseq.next();
+      currentIndex++;
+    }
+    currentIndex = 0;
+    otherseq.reset();
   }
 }
