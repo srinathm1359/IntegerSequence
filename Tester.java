@@ -5,5 +5,9 @@ public class Tester {
     //System.out.println(hello.end);
     //System.out.println(hello.current);
     System.out.println(hello.length());
+    System.out.println(hello.hasNext());
+    Range sizeOne = new Range(1,1);
+    System.out.println(sizeOne.length());
+    System.out.println(sizeOne.hasNext());
   }
 }
