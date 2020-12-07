@@ -34,5 +34,13 @@ public class Tester {
     IntegerSequence as = new ArraySequence(nums);
     System.out.println(as.length());
     System.out.println(as.hasNext());
+    System.out.println("ArraySequence(array):");
+    while(as.hasNext()){
+      System.out.print(as.next());
+      if (as.hasNext()) {
+        System.out.print(", ");
+      }
+    }
+    System.out.println();
   }
 }
