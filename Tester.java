@@ -4,5 +4,6 @@ public class Tester {
     //System.out.println(hello.start);
     //System.out.println(hello.end);
     //System.out.println(hello.current);
+    System.out.println(hello.length());
   }
 }
