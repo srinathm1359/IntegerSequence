@@ -62,5 +62,16 @@ public class Tester {
       }
     }
     System.out.println();
+    IntegerSequence ran = new Range(10,20);
+    IntegerSequence arrseq = new ArraySequence(ran);
+
+    System.out.println("ArraySequence(seq):");
+    while(arrseq.hasNext()){
+      System.out.print(arrseq.next());
+      if (arrseq.hasNext()) {
+        System.out.print(", ");
+      }
+    }
+    System.out.println();
   }
 }
