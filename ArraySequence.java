@@ -18,7 +18,12 @@ public class ArraySequence implements IntegerSequence{
     return data.length;
   }
   public int next() {
-    return 0;
+    if (hasNext()) {
+      currentIndex++;
+      return data[currentIndex - 1];
+    } else {
+      throw new NoSuchElementException("No new element in the IntegerSequence!");
+    }
   }
   public void reset() {
 
