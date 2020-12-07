@@ -9,5 +9,8 @@ public class Tester {
     Range sizeOne = new Range(1,1);
     System.out.println(sizeOne.length());
     System.out.println(sizeOne.hasNext());
+    for (int i = 1; i <= 7; i++) {
+      System.out.println(hello.next());
+    }
   }
 }
