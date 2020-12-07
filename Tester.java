@@ -1,5 +1,6 @@
 public class Tester {
   public static void main(String[] args) {
+    //Testing Range
     IntegerSequence hello = new Range(5,10);
     //System.out.println(hello.start);
     //System.out.println(hello.end);
@@ -29,7 +30,7 @@ public class Tester {
       }
     }
     System.out.println();
-
+    //Testing ArraySequence
     int[]nums = {1,3,5,0,-1,3,9};
     IntegerSequence as = new ArraySequence(nums);
     System.out.println(as.length());
@@ -47,6 +48,16 @@ public class Tester {
     while(as.hasNext()){
       System.out.print(as.next());
       if (as.hasNext()) {
+        System.out.print(", ");
+      }
+    }
+    System.out.println();
+    //Testing ArraySequence with second constructor
+    IntegerSequence foo = new ArraySequence(as);
+    System.out.println("ArraySequence(array):");
+    while(foo.hasNext()){
+      System.out.print(foo.next());
+      if (foo.hasNext()) {
         System.out.print(", ");
       }
     }
