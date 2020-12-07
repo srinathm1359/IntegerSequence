@@ -42,5 +42,14 @@ public class Tester {
       }
     }
     System.out.println();
+    as.reset();
+    System.out.println("ArraySequence(array):");
+    while(as.hasNext()){
+      System.out.print(as.next());
+      if (as.hasNext()) {
+        System.out.print(", ");
+      }
+    }
+    System.out.println();
   }
 }
