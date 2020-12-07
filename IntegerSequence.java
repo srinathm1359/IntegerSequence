@@ -1,4 +1,4 @@
-public interface IntegerSequence{
+public interface IntegerSequence {
   boolean hasNext() ;//does the sequence have more elements?
   int next();         //return the current value in the sequence and advances to the next element
   int length();     //returns the total length of the sequence
