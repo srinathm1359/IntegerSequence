@@ -1,10 +1,13 @@
 import java.util.NoSuchElementException;
 public class ArraySequence implements IntegerSequence{
-  int currentIndex;
-  int []data;
+  private int currentIndex;
+  private int[] data;
 
   /*Construct the sequence by copying values from the other array into the data array*/
-  public ArraySequence(int [] other) {
-  
+  public ArraySequence(int[] other) {
+    data = new int[other.size];
+    for (int i = 0; i < other.size; i++) {
+      data[i] = other[i];
+    }
   }
 }
